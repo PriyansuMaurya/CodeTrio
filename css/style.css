@@ -119,6 +119,28 @@ html {
   margin-right: 10px;
 }
 
-.action-btn-container svg{
+.action-btn-container svg {
   font-size: 25px;
 }
+
+.css-input {
+  padding: 13px;
+  font-size: 29px;
+  border-width: 0px;
+  border-style: solid;
+  border-radius: 15px;
+  height: 10.5vh;
+  width: 50vh;
+  margin: 10px;
+}
+
+
+.testbutton {
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  height: 7vh;
+  width: 30vh;
+  background: #63B8EE;
+}
+

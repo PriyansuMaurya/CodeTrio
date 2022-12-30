@@ -19,7 +19,7 @@
             <header class="section-header">
                 <h2>Pending</h2>
             </header>
-            <div class="todo-container">
+            <div id='toDoContainer' class="todo-container">
                 <div class="todo-task">
                     <h4>Task 1</h4>
                     <div class="action-btn-container">
@@ -41,12 +41,12 @@
                             <path fill="currentColor"
                                 d="M5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h14q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Zm0-2h14V5H5v14Z" />
                         </svg>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                             <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
                             <path fill="currentColor"
                                 d="m10.6 16.2l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4ZM5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h14q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Zm0-2h14V5H5v14ZM5 5v14V5Z" />
-                        </svg> -->
+                        </svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                             <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
@@ -73,19 +73,16 @@
                     <h2>Add Task</h2>
                 </header>
                 <div class="todo-container">
-                    <div class="todo-task"></div>
-                    <div class="todo-task"></div>
-                    <div class="todo-task"></div>
-
+                    <input id='inputField' type="text" class="css-input" />
+                    <button id='addToDO' class="testbutton">ADD</button>
                 </div>
             </div>
             <div class="in-progress">
                 <header class="section-header">
                     <h2>In Progress</h2>
                 </header>
-                <div class="todo-container">
-                    <div class="todo-task"></div>
-                    <div class="todo-task"></div>
+                <div id="inProgressContainer" class="todo-container">
+
 
                 </div>
 
@@ -95,11 +92,8 @@
             <header class="section-header">
                 <h2>Completed</h2>
             </header>
-            <div class="todo-container">
-                <div class="todo-task"></div>
-                <div class="todo-task"></div>
-                <div class="todo-task"></div>
-                <div class="todo-task"></div>
+            <div id="completedContainer" class="todo-container">
+   
             </div>
 
         </div>
@@ -109,3 +103,4 @@
 </body>
 
 </html>
+
