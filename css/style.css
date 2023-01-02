@@ -30,6 +30,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  
 }
 
 .main-header {
@@ -56,6 +57,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
+  position: relative;
 }
 .section-header h2 {
   font-size: 25px;
@@ -66,9 +68,17 @@ html {
   height: 90vh;
   width: 63vh;
   border-radius: 10px;
+  overflow-x: auto;
+  overflow-y: scroll;
+  white-space: nowrap;
+  /* padding: 10px; */
   /* margin: 1%; */
+
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 .live-area {
   display: flex;
   justify-content: space-between;
@@ -88,7 +98,9 @@ html {
   height: 38vh;
   width: 63vh;
   border-radius: 10px;
-
+  overflow-x: auto;
+  overflow-y: scroll;
+  white-space: nowrap;
   /* margin: 1%; */
 }
 
@@ -97,26 +109,37 @@ html {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+
 }
 .todo-task {
   overflow: hidden;
   background-color: #bf8975;
-  height: 10.5vh;
+  height: 10vh;
   width: 50vh;
   margin: 10px;
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  
+
 }
-.todo-task h4 {
+.todo-task h4 label {
   font-size: 25px;
-  margin: 20px;
+  margin: 10px;
 }
 
+.todo-task .discription{
+ margin: 10px;
+}
+.todo-task .discription p{
+  margin: 10px;
+}
 .action-btn-container {
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 10px;
+  /* margin-left: 60px;; */
 }
 
 .action-btn-container svg {
@@ -141,6 +164,68 @@ html {
   border-radius: 10px;
   height: 7vh;
   width: 30vh;
-  background: #63B8EE;
+  background: #63b8ee;
+  margin-top: 10px;
 }
 
+                    
+textarea {
+  resize: none;
+  overflow: auto;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  height: 20vh;
+  width: 50vh;
+  border: none;
+  outline: none;
+  padding: 10px;
+
+}
+
+
+
+
+.expand-label::after {
+  content: "+";
+  margin-left: 3px;
+}
+.expand-toggle {
+  display: none;
+  visibility: hidden;
+}
+
+.expand-label {
+  display: block;
+  padding: 0.5em;
+}
+
+.expand-toggle:checked ~ .expand-label::after {
+  content: "-";
+}
+
+.todo-container .discription{
+  background-color: #bf8975;
+  white-space: normal;
+  color: #141c26;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.todo-container.active .discription{
+  height: 150px;
+} 
+.title-tools{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* padding: auto; */
+  /* margin: auto; */
+  
+}
+
+.todo-container.active  .todo-task {
+  height: auto;
+
+}
