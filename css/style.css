@@ -30,7 +30,6 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  
 }
 
 .main-header {
@@ -73,7 +72,6 @@ html {
   white-space: nowrap;
   /* padding: 10px; */
   /* margin: 1%; */
-
 }
 
 ::-webkit-scrollbar {
@@ -107,32 +105,31 @@ html {
 .todo-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  /* justify-content: space-around; */
   align-items: center;
+  padding-top: auto;
 
 }
 .todo-task {
   overflow: hidden;
   background-color: #bf8975;
-  height: 10vh;
+  /* height: 10vh; */
   width: 50vh;
   margin: 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-
 }
 .todo-task h4 label {
   font-size: 25px;
   margin: 10px;
 }
 
-.todo-task .discription{
- margin: 10px;
+.todo-task .discription {
+  margin: 10px;
 }
-.todo-task .discription p{
+.todo-task .discription p {
   margin: 10px;
 }
 .action-btn-container {
@@ -157,7 +154,6 @@ html {
   margin: 10px;
 }
 
-
 .testbutton {
   font-size: 14px;
   padding: 10px 25px;
@@ -165,10 +161,9 @@ html {
   height: 7vh;
   width: 30vh;
   background: #63b8ee;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
-                    
 textarea {
   resize: none;
   overflow: auto;
@@ -180,11 +175,7 @@ textarea {
   border: none;
   outline: none;
   padding: 10px;
-
 }
-
-
-
 
 .expand-label::after {
   content: "+";
@@ -196,15 +187,13 @@ textarea {
 }
 
 .expand-label {
-  display: block;
+  /* display: block; */
   padding: 0.5em;
 }
 
-.expand-toggle:checked ~ .expand-label::after {
-  content: "-";
-}
 
-.todo-container .discription{
+
+.todo-task .discription {
   background-color: #bf8975;
   white-space: normal;
   color: #141c26;
@@ -213,19 +202,24 @@ textarea {
 
 }
 
-.todo-container.active .discription{
-  height: 150px;
-} 
+
+
 .title-tools{
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
   /* padding: auto; */
   /* margin: auto; */
+  padding-top: 15px;
+
   
 }
 
-.todo-container.active  .todo-task {
+/* .todo-container.active  .todo-task {
   height: auto;
 
-}
+} */
+
+
+
+

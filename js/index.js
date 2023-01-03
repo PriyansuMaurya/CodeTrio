@@ -121,37 +121,38 @@ let pendingContainer = document.getElementById("toDoContainer");
 let inProgressContainer = document.getElementById("inProgressContainer");
 let completedContainer = document.getElementById("completedContainer");
 let inputField = document.getElementById("inputField");
-let discription = document.getElementById("message");
+let discriptionContent = document.getElementById("message");
 
 addToDOButton.addEventListener("click", function () {
   var toDoContent = {
+    id: inputField.value.replace(/\s/g, ""),
     input: inputField.value,
-    discription: discription.value,
+    discription: discriptionContent.value,
   };
 
   var pending = document.createElement("div");
-  pending.setAttribute("id", inputField.value + "pri");
+  pending.setAttribute("id", toDoContent.id + "pri");
   pending.innerHTML = `
-    <div class="todo-task" >
+    <div id=${toDoContent.id + "todo-task"} class="todo-task" >
     <div class="title-tools">
         
         <h4>
         <input class="expand-toggle" id="expand-toggle" type="checkbox">
         <label for="expand-toggle" class="expand-label">${
-          toDoContent.input
+          toDoContent.id
         }</label>
         </h4>
 
         <div class="action-btn-container">
             <svg id="${
-              toDoContent.input
+              toDoContent.id
             }" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 24 24">
                 <path fill="currentColor"
                     d="M9.525 18.025q-.5.325-1.013.037Q8 17.775 8 17.175V6.825q0-.6.512-.888q.513-.287 1.013.038l8.15 5.175q.45.3.45.85t-.45.85Z" />
             </svg>
             <svg id="${
-              toDoContent.input + " -unchecked"
+              toDoContent.id + "-unchecked"
             }" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                 <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
@@ -159,7 +160,7 @@ addToDOButton.addEventListener("click", function () {
                     d="M5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h14q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Zm0-2h14V5H5v14Z" />
             </svg>
             <svg id="${
-              toDoContent.input + " -edit"
+              toDoContent.id + "-edit"
             }" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                 <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
@@ -168,7 +169,7 @@ addToDOButton.addEventListener("click", function () {
             </svg>
 
             <svg id="${
-              toDoContent.input + " -delete-pending"
+              toDoContent.id + "-delete-pending"
             }" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                 <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
@@ -180,45 +181,45 @@ addToDOButton.addEventListener("click", function () {
     </div>
     <div class="discription">
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Hic minima ab tenetur repellat blanditiis aspernatur odio
-        velit ipsum saepe deserunt nesciunt, quibusdam aliquid 
-        molestias debitis quas perferendis accusamus quia obcaecati?
-        
+        ${toDoContent.discription}
         </p>
     </div>
     </div>   
    
         `;
   pendingContainer.appendChild(pending);
-  var input = inputField.value;
+  var temp = inputField.value;
+
+  // Clearning input boxxes
   inputField.value = "";
+  discriptionContent.value = "";
   var svgDeletePending = document.getElementById(
-    toDoContent.input + "-delete-pending"
+    toDoContent.id + "-delete-pending"
   );
+
   svgDeletePending.addEventListener("click", () => {
     pendingContainer.removeChild(pending);
   });
 
-  var unchecked = document.getElementById(toDoContent.input + "-unchecked");
+  var unchecked = document.getElementById(toDoContent.id + "-unchecked");
 
   unchecked.addEventListener("click", () => {
     completedContainer.appendChild(pending);
     pendingContainer.removeChild(pending);
   });
-  var svgEdit = document.getElementById(toDoContent.input + "-edit");
+  var svgEdit = document.getElementById(toDoContent.id + "-edit");
   console.log(svgEdit);
   svgEdit.addEventListener("click", () => {
-    inputField.value = toDoContent.input;
+    inputField.value = toDoContent.id;
     pendingContainer.removeChild(pending);
   });
-  var svgPause = document.getElementById(toDoContent.input);
+  var svgPause = document.getElementById(toDoContent.id);
   svgPause.addEventListener("click", (e) => {
     let inProgress = document.createElement("div");
-    inProgress.setAttribute("id", toDoContent.input + "pri");
+    inProgress.setAttribute("id", toDoContent.id + "pri");
     inProgress.innerHTML = `
           <div class="todo-task">
-          <h4>${toDoContent.input}</h4>
+          <h4>${toDoContent.id}</h4>
           <div class="action-btn-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 256 256">
@@ -226,7 +227,7 @@ addToDOButton.addEventListener("click", function () {
                   <path fill="currentColor"
                       d="M200 28h-36a20.1 20.1 0 0 0-20 20v160a20.1 20.1 0 0 0 20 20h36a20.1 20.1 0 0 0 20-20V48a20.1 20.1 0 0 0-20-20Zm-4 176h-28V52h28ZM92 28H56a20.1 20.1 0 0 0-20 20v160a20.1 20.1 0 0 0 20 20h36a20.1 20.1 0 0 0 20-20V48a20.1 20.1 0 0 0-20-20Zm-4 176H60V52h28Z" />
               </svg>
-              <svg id="${toDoContent.input}" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+              <svg id="${toDoContent.id}" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
                   viewBox="0 0 24 24">
                   <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
                   <path fill="currentColor"
@@ -238,15 +239,15 @@ addToDOButton.addEventListener("click", function () {
     inProgressContainer.appendChild(inProgress);
     pendingContainer.removeChild(pending);
 
-    var svgTick = document.getElementById(toDoContent.input);
+    var svgTick = document.getElementById(toDoContent.id);
 
     svgTick.addEventListener("click", (e) => {
       let completed = document.createElement("div");
-      completed.setAttribute("id", toDoContent.input + "pri");
+      completed.setAttribute("id", toDoContent.id + "pri");
 
       completed.innerHTML = `
               <div class="todo-task">
-                  <h4>${toDoContent.input}</h4>
+                  <h4>${toDoContent.id}</h4>
                   <div class="action-btn-container">
               
                       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
@@ -256,7 +257,7 @@ addToDOButton.addEventListener("click", function () {
                               d="m10.6 16.2l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4ZM5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h14q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Zm0-2h14V5H5v14ZM5 5v14V5Z" />
                       </svg>
                       <svg id="${
-                        toDoContent.input + "-delete-completed"
+                        toDoContent.id + "-delete-completed"
                       }" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
                           viewBox="0 0 24 24">
                           <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
@@ -269,7 +270,7 @@ addToDOButton.addEventListener("click", function () {
 
       completedContainer.appendChild(completed);
       var svgDeleteCompleted = document.getElementById(
-        toDoContent.input + "-delete-completed"
+        toDoContent.id + "-delete-completed"
       );
       svgDeleteCompleted.addEventListener("click", () => {
         completedContainer.removeChild(completed);
