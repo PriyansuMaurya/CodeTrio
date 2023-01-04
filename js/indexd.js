@@ -17,9 +17,9 @@ addToDOButton.addEventListener("click", function () {
   pending.innerHTML = pendingTemplate(toDoContent);
   pendingContainer.appendChild(pending);
 
-  var tempDiscription = document.getElementById(toDoContent.id + "todo-task");
+  let tempDiscription = document.getElementById(toDoContent.id + "todo-task");
   // console.log(tempDiscription);
-  var tempLabel = document.getElementById(toDoContent.id + "-label");
+  let tempLabel = document.getElementById(toDoContent.id + "-label");
   tempLabel.addEventListener("click", () => {
     if (tempDiscription.style.height === "10vh") {
       tempDiscription.style.height = "auto";
@@ -81,7 +81,21 @@ addToDOButton.addEventListener("click", function () {
     inProgress.setAttribute("id", toDoContent.id + "pri");
 
     inProgress.innerHTML = progressTemplate(toDoContent);
+
     inProgressContainer.appendChild(inProgress);
+
+    let tempDiscription = document.getElementById(
+      toDoContent.id + "todo-task-progress"
+    );
+    let tempLabel = document.getElementById(toDoContent.id + "-label-progress");
+
+    tempLabel.addEventListener("click", () => {
+      if (tempDiscription.style.height === "10vh") {
+        tempDiscription.style.height = "auto";
+      } else {
+        tempDiscription.style.height = "10vh";
+      }
+    });
     pendingContainer.removeChild(pending);
 
     // --------------------------COMPLETE LOGIC---------------------------------------------------
@@ -94,6 +108,20 @@ addToDOButton.addEventListener("click", function () {
 
       completed.innerHTML = completedTemplate(toDoContent);
       completedContainer.appendChild(completed);
+      let tempDiscription = document.getElementById(
+        toDoContent.id + "todo-task-completed"
+      );
+      let tempLabel = document.getElementById(
+        toDoContent.id + "-label-completed"
+      );
+
+      tempLabel.addEventListener("click", () => {
+        if (tempDiscription.style.height === "10vh") {
+          tempDiscription.style.height = "auto";
+        } else {
+          tempDiscription.style.height = "10vh";
+        }
+      });
       var svgDeleteCompleted = document.getElementById(
         toDoContent.id + "-delete-completed"
       );
@@ -176,12 +204,8 @@ const pendingTemplate = (toDoContent) => {
 
         </div>
     </div>
-    <div id=${
-      toDoContent.id + "-discription"
-    } class="discription" >
-        <p style="white-space: normal">
-        ${toDoContent.discription}
-        </p>
+    <div id=${toDoContent.id + "-discription"} class="discription" >
+        <pre>${toDoContent.discription}</pre>
     </div>
     </div>   
    
@@ -193,15 +217,15 @@ const pendingTemplate = (toDoContent) => {
 const progressTemplate = (toDoContent) => {
   return `
     <div id=${
-      toDoContent.id + "todo-task"
+      toDoContent.id + "todo-task-progress"
     } class="todo-task"  style="height: 10vh;">
     <div class="title-tools">
         
         <h4>
         <input class="expand-toggle" id="expand-toggle" type="checkbox">
-        <label for="expand-toggle" class="expand-label">${
-          toDoContent.input
-        }</label>
+        <label for="expand-toggle" id=${
+          toDoContent.id + "-label-progress"
+        } class="expand-label">${toDoContent.input}</label>
         </h4>
 
         <div class="action-btn-container">
@@ -223,10 +247,8 @@ const progressTemplate = (toDoContent) => {
 
         </div>
         </div>
-        <div class="discription">
-        <p>
-        ${toDoContent.discription}
-        </p>
+        <div id=${toDoContent.id + "-discription"} class="discription" >
+        <pre>${toDoContent.discription}</pre>
         </div>
         </div>   
    
@@ -235,15 +257,15 @@ const progressTemplate = (toDoContent) => {
 const completedTemplate = (toDoContent) => {
   return `
       <div id=${
-        toDoContent.id + "todo-task"
+        toDoContent.id + "todo-task-completed"
       } class="todo-task" style="height: 10vh;">
       <div class="title-tools">
           
           <h4>
           <input class="expand-toggle" id="expand-toggle" type="checkbox">
-          <label for="expand-toggle" class="expand-label">${
-            toDoContent.input
-          }</label>
+          <label for="expand-toggle" id=${
+            toDoContent.id + "-label-completed"
+          } class="expand-label">${toDoContent.input}</label>
           </h4>
   
           <div class="action-btn-container">

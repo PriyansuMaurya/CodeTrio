@@ -108,7 +108,6 @@ html {
   /* justify-content: space-around; */
   align-items: center;
   padding-top: auto;
-
 }
 .todo-task {
   overflow: hidden;
@@ -177,10 +176,6 @@ textarea {
   padding: 10px;
 }
 
-.expand-label::after {
-  content: "+";
-  margin-left: 3px;
-}
 .expand-toggle {
   display: none;
   visibility: hidden;
@@ -191,35 +186,25 @@ textarea {
   padding: 0.5em;
 }
 
-
-
 .todo-task .discription {
   background-color: #bf8975;
-  white-space: normal;
   color: #141c26;
   position: relative;
-  overflow: hidden;
-
+  width: 45vh;
+  margin: 25px;
+  /* width: 1px; */
 }
 
-
-
-.title-tools{
+.title-tools {
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
   /* padding: auto; */
   /* margin: auto; */
   padding-top: 15px;
-
-  
 }
 
 /* .todo-container.active  .todo-task {
   height: auto;
 
 } */
-
-
-
-
