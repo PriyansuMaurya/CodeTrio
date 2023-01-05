@@ -4,24 +4,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-  font: bold 14px Aria, "San Francisco font";
-}
-/* Color Theme Swatches in Hex */
-.Fashion-1-hex {
-  color: #2d3340;
-}
-.Fashion-2-hex {
-  color: #141c26;
-}
-.Fashion-3-hex {
-  color: #593122;
-}
-.Fashion-4-hex {
-  color: #8c5c4a;
-}
-.Fashion-5-hex {
-  color: #bf8975;
+  caret-color: transparent;
 }
 
 html {
@@ -34,42 +17,52 @@ html {
 
 .main-header {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px 40px;
-  box-shadow: 0 1px 8px #ddd;
+  justify-content: center;
+  padding: 20px 40px;
+  text-align: center;
+  /* box-shadow: 0 1px 8px #ddd; */
 }
 
 #nav-title {
-  margin-right: auto;
-  font-size: 2em;
+  font-family: "Anton", "helvetica", sans-serif;
+  font-size: 30px;
+  letter-spacing: 20px;
+  line-height: 1;
 }
 
 .section-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .section-header {
+  position: fixed;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 50px;
-  position: relative;
+  height: 50px;
+  width: 400px;
+  border-radius: 10px 10px 0px 0px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.section-header h2 {
+.section-header span {
   font-size: 25px;
+  color: #fff;
+  padding: 10px;
 }
 
 .pending {
   background-color: #141c26;
-  height: 90vh;
-  width: 63vh;
+  height: 630px;
+  width: 400px;
   border-radius: 10px;
   overflow-x: auto;
   overflow-y: scroll;
-  white-space: nowrap;
   /* padding: 10px; */
   /* margin: 1%; */
 }
@@ -77,6 +70,7 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+
 .live-area {
   display: flex;
   justify-content: space-between;
@@ -84,8 +78,8 @@ html {
 }
 .add-task {
   background-color: #141c26;
-  height: 50vh;
-  width: 63vh;
+  height: 300px;
+  width: 400px;
   border-radius: 10px;
 
   /* margin: 1%; */
@@ -93,8 +87,8 @@ html {
 
 .in-progress {
   background-color: #141c26;
-  height: 38vh;
-  width: 63vh;
+  height: 303px;
+  width: 400px;
   border-radius: 10px;
   overflow-x: auto;
   overflow-y: scroll;
@@ -105,32 +99,31 @@ html {
 .todo-container {
   display: flex;
   flex-direction: column;
+
   /* justify-content: space-around; */
   align-items: center;
-  padding-top: auto;
+  padding-top: 54px;
 }
+
 .todo-task {
   overflow: hidden;
   background-color: #bf8975;
-  /* height: 10vh; */
-  width: 50vh;
+  width: 330px;
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
-.todo-task h4 label {
+
+.reverse {
+  flex-direction: column-reverse;
+}
+
+.todo-task span label {
   font-size: 25px;
   margin: 10px;
 }
 
-.todo-task .discription {
-  margin: 10px;
-}
-.todo-task .discription p {
-  margin: 10px;
-}
 .action-btn-container {
   margin-top: auto;
   margin-bottom: auto;
@@ -139,26 +132,27 @@ html {
 }
 
 .action-btn-container svg {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .css-input {
   padding: 13px;
-  font-size: 29px;
-  border-width: 0px;
-  border-style: solid;
-  border-radius: 15px;
-  height: 10.5vh;
-  width: 50vh;
-  margin: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px 10px 0px 0px;
+  height: 50px;
+  width: 330px;
+  margin-top: 10px;
 }
 
 .testbutton {
   font-size: 14px;
   padding: 10px 25px;
   border-radius: 10px;
-  height: 7vh;
-  width: 30vh;
+  margin-top: 10px;
+  height: auto;
+  width: auto;
   background: #63b8ee;
   /* margin-top: 10px; */
 }
@@ -168,9 +162,9 @@ textarea {
   overflow: auto;
   font-size: 20px;
   padding: 10px 25px;
-  border-radius: 20px;
-  height: 20vh;
-  width: 50vh;
+  border-radius: 0px 0px 10px 10px;
+  height: 130px;
+  width: 330px;
   border: none;
   outline: none;
   padding: 10px;
@@ -182,7 +176,6 @@ textarea {
 }
 
 .expand-label {
-  /* display: block; */
   padding: 0.5em;
 }
 
@@ -199,12 +192,8 @@ textarea {
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
-  /* padding: auto; */
+  /* align-items: center; */
+  padding: auto;
   /* margin: auto; */
   padding-top: 15px;
 }
-
-/* .todo-container.active  .todo-task {
-  height: auto;
-
-} */

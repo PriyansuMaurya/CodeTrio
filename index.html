@@ -5,21 +5,23 @@
     <meta charset="UTF-8" />
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="main-header">
-        <h1 id="nav-title">Adams TODO</h1>
-
+        <h1 id="nav-title">ADAMS TODO</h1>
     </header>
 
     <div class="section-container">
         <div class="pending">
             <header class="section-header">
-                <h2>Pending</h2>
+                <span>Home</span>
             </header>
-            <div id='toDoContainer' class="todo-container">
+            <div id='toDoContainer' class="todo-container reverse">
 
 
 
@@ -28,11 +30,12 @@
         <div class="live-area">
             <div class="add-task">
                 <header class="section-header">
-                    <h2>Add Task</h2>
+                    <span>Add Task</span>
                 </header>
                 <div class="todo-container">
-                    <input id='inputField' maxlength="10px" type="text" class="css-input" />
-                    <textarea id="message" name="message" style="white-space: pre-line;"></textarea>
+                    <input id='inputField' placeholder="Walk Dog" maxlength="10px" type="text" class="css-input" />
+                    <textarea id="message" placeholder="Discription" name="message"
+                        style="white-space: pre-line;"></textarea>
 
 
                     <button id='addToDO' class="testbutton">ADD</button>
@@ -40,9 +43,9 @@
             </div>
             <div class="in-progress">
                 <header class="section-header">
-                    <h2>In Progress</h2>
+                    <span>In Progress</span>
                 </header>
-                <div id="inProgressContainer" class="todo-container">
+                <div id="inProgressContainer" class="todo-container reverse">
 
 
                 </div>
@@ -51,9 +54,9 @@
         </div>
         <div class="pending">
             <header class="section-header">
-                <h2>Completed</h2>
+                <span>Completed</span>
             </header>
-            <div id="completedContainer" class="todo-container">
+            <div id="completedContainer" class="todo-container reverse">
 
             </div>
 
