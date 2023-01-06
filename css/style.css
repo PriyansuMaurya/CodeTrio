@@ -7,14 +7,40 @@
 
   font: bold 14px Aria, "San Francisco font";
 }
-
-html {
+body div {
   height: 100%;
-  background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
 }
 
-body{
-  color: white;
+body div div {
+  font-size: 100px;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* #vs{
+  font-size: 50px;
+  float: right;
+} */
+
+.entry {
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
+
+.entry img {
+  margin-top: -80px;
+  margin-left: -160px;
+  height: 180%;
+  width: 180%;
+}
+
+.vs #vs {
+  justify-content: left;
+  padding: 30px 0px 0px 30px;
+  word-spacing: 10px;
+  margin-left: -100px;
+  font-size: 20px;
 }
