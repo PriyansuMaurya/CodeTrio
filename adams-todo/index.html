@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1 id="nav-title">ADAMS TODO</h1>
+    </header>
+
+    <div class="section-container">
+        <div class="pending">
+            <header class="section-header">
+                <span>Home</span>
+            </header>
+            <div id='toDoContainer' class="todo-container reverse">
+
+
+
+            </div>
+        </div>
+        <div class="live-area">
+            <div class="add-task">
+                <header class="section-header">
+                    <span>Add Task</span>
+                </header>
+                <div class="todo-container">
+                    <input id='inputField' placeholder="Walk Dog" maxlength="10px" type="text" class="css-input" />
+                    <textarea id="message" placeholder="Discription" name="message"
+                        style="white-space: pre-line;"></textarea>
+
+
+                    <button id='addToDO' class="testbutton">ADD</button>
+                </div>
+            </div>
+            <div class="in-progress">
+                <header class="section-header">
+                    <span>In Progress</span>
+                </header>
+                <div id="inProgressContainer" class="todo-container reverse">
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="pending">
+            <header class="section-header">
+                <span>Completed</span>
+            </header>
+            <div id="completedContainer" class="todo-container reverse">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/indexd.js"></script>
+</body>
+
+</html>
