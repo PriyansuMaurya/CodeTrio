@@ -5,27 +5,74 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   caret-color: transparent;
+  transition: all 0.5s ease-in-out;
+  --color11: #344648;
+  --color12: #64766a;
+  --color13: #ed109cd8;
+  --color14: #9f86c084;
+}
+
+.default-pallet {
+  --color1: #5e548e;
+  --color5: #9f86c084;
+  --color2: #5e548e;
+  --color3: #e0b1cb96;
+  --color4: #fffffff6;
+  --color6: rgb(255, 255, 255);
+}
+
+/*Dark Theme*/
+.pallet-1 {
+  --color1: #777a80;
+  --color3: #5f6e6f;
+  --color2: #7d8e95;
+  --color5: #344648;
+  --color4: #fffffff6;
+  --color6: rgb(255, 255, 255);
+}
+
+.pallet-2 {
+  --color1: #829e8bb0;
+  --color3: #829e8b;
+  --color2: #94a7ae;
+  --color5: #64766a;
+  --color4: #fffffff6;
+  --color6: rgb(255, 255, 255);
+}
+
+.pallet-3 {
+  --color1: #ffcad4c3;
+  --color2: #ff0aa1d6;
+  --color3: #ff5cd6;
+  --color5: #ed109cd8;
+  --color4: #fffffff6;
+  --color6: #ffffff;
 }
 
 html {
   height: 100%;
-  background-color: #492939;
+  background-color: var(--color2);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  font-family: "Sofia Sans", sans-serif;
+  color: var(--color4);
 }
 
 .main-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  /* flex-direction: row-reverse; */
   padding: 20px 40px;
   text-align: center;
   /* box-shadow: 0 1px 8px #ddd; */
 }
 
 #nav-title {
-  font-family: "Anton", "helvetica", sans-serif;
+  font-family: "Rowdies", cursive;
   font-size: 30px;
+  /* margin-right: 320px; */
+  /* margin-left: 460px; */
   letter-spacing: 20px;
   line-height: 1;
 }
@@ -38,11 +85,12 @@ html {
 
 .section-header {
   position: fixed;
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
+  color: var(--color4);
   width: 400px;
   border-radius: 10px 10px 0px 0px;
   background: rgba(255, 255, 255, 0.25);
@@ -52,19 +100,18 @@ html {
 }
 .section-header span {
   font-size: 25px;
-  color: #fff;
+  /* color: #fff;  */
+  color: var(--color6);
   padding: 10px;
 }
 
 .pending {
-  background-color: #141c26;
+  background-color: var(--color5);
   height: 630px;
   width: 400px;
   border-radius: 10px;
   overflow-x: auto;
   overflow-y: scroll;
-  /* padding: 10px; */
-  /* margin: 1%; */
 }
 
 ::-webkit-scrollbar {
@@ -77,7 +124,7 @@ html {
   flex-direction: column;
 }
 .add-task {
-  background-color: #141c26;
+  background-color: var(--color5);
   height: 300px;
   width: 400px;
   border-radius: 10px;
@@ -86,7 +133,7 @@ html {
 }
 
 .in-progress {
-  background-color: #141c26;
+  background-color: var(--color5);
   height: 303px;
   width: 400px;
   border-radius: 10px;
@@ -107,12 +154,13 @@ html {
 
 .todo-task {
   overflow: hidden;
-  background-color: #bf8975;
+  background-color: var(--color3);
   width: 330px;
   margin: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  color: var(--color4);
 }
 
 .reverse {
@@ -148,12 +196,14 @@ html {
 
 .testbutton {
   font-size: 14px;
+  font-weight: bold;
   padding: 10px 25px;
   border-radius: 10px;
+  border: none;
   margin-top: 10px;
-  height: auto;
-  width: auto;
-  background: #63b8ee;
+  /* background: #63b8ee; */
+  background-color: var(--color1);
+  color: var(--color4);
   /* margin-top: 10px; */
 }
 
@@ -180,12 +230,22 @@ textarea {
 }
 
 .todo-task .discription {
-  background-color: #bf8975;
-  color: #141c26;
   position: relative;
   width: 45vh;
   margin: 25px;
   /* width: 1px; */
+}
+.todo-task .discription .time-container {
+  /* margin-top: -30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 170px;
+
+}
+.todo-task .discription iconify-icon {
+  margin-bottom: 1px;
+  margin-right: 3px;
 }
 
 .title-tools {
@@ -196,4 +256,41 @@ textarea {
   padding: auto;
   /* margin: auto; */
   padding-top: 15px;
+}
+
+.align {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 0px;
+  margin: 0px;
+  align-self: flex-end;
+}
+
+.red {
+  width: 20px;
+  height: 25px;
+  border-radius: 45%;
+  background-color: var(--color11);
+}
+
+.yellow {
+  width: 20px;
+  height: 25px;
+  border-radius: 45%;
+  background-color: var(--color12);
+}
+
+.green {
+  width: 20px;
+  height: 25px;
+  border-radius: 45%;
+  background-color: var(--color13);
+}
+
+.default {
+  width: 20px;
+  height: 25px;
+  border-radius: 45%;
+  background-color: var(--color14);
 }

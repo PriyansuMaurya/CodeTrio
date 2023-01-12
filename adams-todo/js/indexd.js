@@ -1,3 +1,37 @@
+// Date --------------------------------------------------------------------------------
+
+var today = new Date();
+
+// Current Date
+var date =
+  today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+const dateElement = document.getElementById("date");
+dateElement.innerHTML += date;
+// ----------------------------------------------CHANGE COLOR PALLET------------------------------------------------------
+
+function $(el) {
+  return document.querySelector(el);
+}
+
+let container = $(".big-container");
+let toggle1 = $("#toggle-pallet-1");
+let toggle2 = $("#toggle-pallet-2");
+let toggle3 = $("#toggle-pallet-3");
+let toggle4 = $("#default-pallet");
+
+function onClickToggle(toggle, toggleClass) {
+  toggle.addEventListener("click", () => {
+    let list = container.classList;
+    list.replace(list[1], toggleClass);
+  });
+}
+onClickToggle(toggle1, "pallet-1");
+onClickToggle(toggle2, "pallet-2");
+onClickToggle(toggle3, "pallet-3");
+onClickToggle(toggle4, "default-pallet");
+
+// ---------------------------------------------------------------------------------------------------
+
 let addToDOButton = document.getElementById("addToDO");
 let pendingContainer = document.getElementById("toDoContainer");
 let inProgressContainer = document.getElementById("inProgressContainer");
@@ -6,10 +40,13 @@ let inputField = document.getElementById("inputField");
 let discriptionContent = document.getElementById("message");
 
 addToDOButton.addEventListener("click", function () {
+  var today = new Date();
   var toDoContent = {
     id: inputField.value.replace(/\s/g, ""),
     input: inputField.value,
     discription: discriptionContent.value,
+    time:
+      today.getHours() + "/" + today.getMinutes() + "/" + today.getSeconds(),
   };
 
   var pending = document.createElement("div");
@@ -76,7 +113,7 @@ addToDOButton.addEventListener("click", function () {
     inProgressContainer.appendChild(inProgress);
 
     // adding toggle todo discription
-    
+
     toggleDiscription("progress", toDoContent);
     pendingContainer.removeChild(pending);
 
@@ -143,7 +180,11 @@ const commonTemplate = (sectionType, toDoContent, svgs) => {
       </div>
   </div>
   <div id=${toDoContent.id + "-discription"} class="discription" >
-      <pre>${toDoContent.discription}</pre>
+    <div class="time-container">
+      <iconify-icon icon="mdi:clock"></iconify-icon>
+      <span class=${"time"}>${" : " + toDoContent.time}<span>
+    </div>
+    <pre>${toDoContent.discription}</pre>
   </div>
   </div>   
  
