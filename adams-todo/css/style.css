@@ -166,10 +166,15 @@ html {
 .reverse {
   flex-direction: column-reverse;
 }
-
+.time {
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
 .todo-task span label {
-  font-size: 25px;
+  font-size: 17px;
   margin: 10px;
+  font-weight: 600;
 }
 
 .action-btn-container {
@@ -241,7 +246,6 @@ textarea {
   align-items: center;
   justify-content: center;
   margin-left: 170px;
-
 }
 .todo-task .discription iconify-icon {
   margin-bottom: 1px;
@@ -255,7 +259,7 @@ textarea {
   /* align-items: center; */
   padding: auto;
   /* margin: auto; */
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 .align {
