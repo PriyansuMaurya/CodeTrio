@@ -5,8 +5,13 @@
     <meta charset="UTF-8" />
     <title>Tribute To Vikram Sarabhai</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Sofia+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
     <div class="tfoispvs">
@@ -15,8 +20,9 @@
                 <input id="darkmode" type="checkbox">
                 <span class="slider" for="darkmode" style="margin: -40px 20px 0px 0px;"></span>
             </label> -->
-            <div style="font-size: 80px; padding-top: 50px;"> THE FATHER OF INDIAN </div>
-            <div style="font-size: 105px;"> SPACE PROGRAM </div>
+
+            <div style="font-size: 80px; padding-top: 50px;font-weight: 700;  "> THE FATHER OF INDIAN </div>
+            <div style="font-size: 105px;font-weight: 700;"> SPACE PROGRAM </div>
             <div class="entry">
                 <img id="vikram-sarabhai" src=".\images\vikram-sarabhai.png" />
                 <div class="vs">
@@ -66,14 +72,26 @@
     <div class="fact-album">
         <div class="image-holder">
             <div>
-                <span style="font-size: 95px; transform: scale(3);padding-bottom: 30px;">10</span>
-                <span style="font-size: 45px;padding-top: 50px;" n>Facts You didn't</span>
-                <span style="font-size: 45px;">know about Him!</span>
+                <span style="font-size: 95px; transform: scale(3);padding-bottom: 30px;font-weight: 700; ">10</span>
+                <span style="font-size: 45px;padding-top: 50px;font-weight: 700; " n>Facts You didn't</span>
+                <span style="font-size: 45px; font-weight: 700; ">know about Him!</span>
             </div>
             <img src="./images/album.png" alt="" class="src">
         </div>
-        
-        <div class="container center" id="card-container">
+
+        <div class="slider">
+            <div class="slide_viewer">
+                <div class="slide_group"></div>
+            </div>
+        </div>
+
+        <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+                <iconify-icon icon="ph:arrow-circle-up-thin" rotate="270deg" width="65px" height="65px"></iconify-icon>
+            </div>
+            <div class="next_btn" title="Next">
+                <iconify-icon icon="ph:arrow-circle-up-thin" rotate="90deg" width="65px" height="65px"></iconify-icon>
+            </div>
         </div>
     </div>
 
@@ -88,7 +106,6 @@
             <ul id="first-list">
                 <li>
                     <span></span>
-                    <div class="title">comment #01</div>
                     <div class="info">He returned to India when the country had newly become independent. Sensing the
                         need for better scientific facilities in the country, Sarabhai convinced the charitable trusts
                         his family managed to establish The Physical Research Laboratory (PRL) in Ahmedabad in November
@@ -101,7 +118,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">summery #01</div>
                     <div class="info">K.R. Ramanathan, an atmospheric scientist was the founder director of PRL and
                         under his able guidance the institution went on to become a leading research organization
                         dedicated to cosmic rays and space sciences.</div>
@@ -113,7 +129,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">summery #01</div>
                     <div class="info">Dr. Vikram Sarabhai was very much interested in science education and founded the
                         Community Science Centre at Ahmedabad in 1956. It is also called Vikram Sarabhai Community
                         Science Centre (VASCSC). He also started a project for the fabrication and the launch of an
@@ -126,7 +141,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">During the 1960s he also established the Vikram A. Sarabhai Community Science
                         Centre (VASCSC) for promoting science and mathematics education among students and the general
                         public. The organization aimed at stimulating interest in science subject among the masses.
@@ -139,7 +153,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #02</div>
                     <div class="info">He was the founding director of the Indian Institute of Management (IIM),
                         Ahmedabad which was the second IIM in the country. Along with businessman Kasturbhai Lalbhai he
                         played a key role in setting up the institute of learning in 1961.</div>
@@ -155,7 +168,6 @@
 
                 <li>
                     <span></span>
-                    <div class="title">comment #03</div>
                     <div class="info">He was the driving force behind the setting up of the Centre for Environmental
                         Planning and Technology University (CEPT University) in Ahmedabad in 1962 which offers
                         undergraduate and postgraduate programs in disciplines like architecture, planning and
@@ -168,7 +180,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">Sarabhai was fully supported in his ventures by Dr. Homi Bhabha who was a pioneer
                         in the field of nuclear research in India. Bhabha helped Sarabhai in setting up the first rocket
                         launching station at Thumba on the coast of the Arabian Sea. The inaugural flight was launched
@@ -181,7 +192,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">First rocket launched in India - Nike Apache from the shores of Thumba,Trivandrum
                     </div>
                     <div class="name"></div>
@@ -192,7 +202,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">summery #02</div>
                     <div class="info">In 1965, he founded the Nehru Foundation for Development (NFD) which is dedicated
                         towards the promotion of basic study on the current problems of societal and individual
                         development.</div>
@@ -204,7 +213,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">summery #02</div>
                     <div class="info">India’s first indigenous sounding rocket, RH-75, was launched</div>
                     <div class="name"></div>
                     <div class="time">
@@ -214,7 +222,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">summery #02</div>
                     <div class="info">TERLS dedicated to the United Nations by Prime Minister Indira Gandhi.</div>
                     <div class="name"></div>
                     <div class="time">
@@ -224,7 +231,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">His most significant contribution to India was the Indian Space Research
                         Organization (ISRO) which he helped to establish in 1969. The major objective of the
                         organization is to advance space technology and apply it for national benefits.</div>
@@ -236,7 +242,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">At the Bombay National Electronics Conference in 1970, Vikram Sarabhai announced
                         plans to launch an Indian National Satellite. ISRO launched these multipurpose geostationary
                         satellites to boost telecommunication, meteorology, and broadcasting.</div>
@@ -248,7 +253,6 @@
                 </li>
                 <li>
                     <span></span>
-                    <div class="title">comment #04</div>
                     <div class="info">On 30 December 1971, Sarabhai was to review the SLV design before his departure
                         for Bombay the same night. He had spoken to A. P. J. Abdul Kalam on the telephone. Within an
                         hour of the conversation, Sarabhai died at the age of 52 due to cardiac arrest in Trivandrum
@@ -267,13 +271,16 @@
         </div>
 
     </div>
-    <hr class="hr-2">
+    <hr class="hr-7">
 
     <div class="footer">
-        <p>If you have the time and want to learn more about this remarkable person, follow this link for more
+        <p>If you have the time and want to learn more about this remarkable person, follow this <a
+                href="https://en.wikipedia.org/wiki/Vikram_Sarabhai" target="_blank">link</a> for more
             information.</p>
 
     </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 
