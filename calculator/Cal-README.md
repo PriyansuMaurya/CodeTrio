@@ -14,5 +14,14 @@
 
 # Here is the screenshot of the same.
 
+<br>
+<br>
+
 
 ![Calculator](https://user-images.githubusercontent.com/101447544/213121729-42571e08-c554-458d-81cb-6c5387802b26.png)
+
+
+<br>
+<hr>
+<br>
+<br>

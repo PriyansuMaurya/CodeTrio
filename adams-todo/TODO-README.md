@@ -10,10 +10,16 @@
 
 <br>
 
-![Screenshot 1](https://user-images.githubusercontent.com/101447544/213194978-8b950d22-1d14-480f-b3e0-b6d3bd31a652.png)
 
 # Here is the screenshots of the same.
 
+<br>
+<br>
+
+![Screenshot 1](https://user-images.githubusercontent.com/101447544/213194978-8b950d22-1d14-480f-b3e0-b6d3bd31a652.png)
+
+<br>
+<hr>
 <br>
 <br>
 
