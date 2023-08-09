@@ -1,34 +1,31 @@
-# Web-Development Projects
+# Welcome 🚀🎉
 
-<br><br>
+This repository showcases a variety of projects I've worked on, each demonstrating different aspects of web development. Feel free to explore and interact with the projects to get a better understanding of my skills and style. 👨‍💻
 
-| Title | Code | Live Demo | Preview |
-| ----- | ---- | --------- | ------- |
-| iPhone Calculator | [Calculator](https://github.com/PriyansuMaurya/CodeTrio/tree/main/calculator) | [See Calculator](https://priyansumaurya.github.io/CodeTrio/calculator/) | [SS](#1️⃣) |
-| Adams TODO | [TODO](https://github.com/PriyansuMaurya/CodeTrio/tree/main/adams-todo) | [See TODO](https://priyansumaurya.github.io/CodeTrio/adams-todo/) | [SS](#2️⃣) |
-| Tribute Page | [Tribute To Vikram Sarabhai](https://github.com/PriyansuMaurya/CodeTrio/tree/main/tribute-to-vikram-sarabhai) | [Tribute Page](https://priyansumaurya.github.io/CodeTrio/tribute-to-vikram-sarabhai/) | [SS](#3️⃣) |
+## Project List 📋
 
-## 1️⃣ . 
+Here's a list of the projects along with their details:
 
-<br>
+| Project | Description | Code Repository | Live Demo |
+| :-----: | :---------: | :-------------: | :-------: |
+| [Trello Management](https://trellomanagement.vercel.app/) | A straightforward web application showcasing beloved characters from Rick and Morty, complete with various filter options for enhanced exploration. | [GitHub](https://github.com/PriyansuMaurya/Trello-Management) | [Live Demo](https://trellomanagement.vercel.app/) |
+| [Rick and Morty App](https://rickkandmorty.vercel.app/) | Discover our Trello-inspired board with drag-and-drop simplicity! Three swimlanes: To Do, In Progress, and Completed. Manage tasks effortlessly. 🚀 | [GitHub](https://github.com/PriyansuMaurya/Rick-and-Morty-App) | [Live Demo](https://rickkandmorty.vercel.app/) |
+| [Adams TODO](https://priyansumaurya.github.io/code-trio/adams-todo/) | A sleek TODO app designed for efficient task management. | [GitHub](https://github.com/PriyansuMaurya/code-trio/tree/main/adams-todo) | [Live Demo](https://priyansumaurya.github.io/code-trio/adams-todo/) |
+| [Tribute Page](https://priyansumaurya.github.io/code-trio/tribute-to-vikram-sarabhai/) | A tribute to the visionary scientist Vikram Sarabhai. | [GitHub](https://github.com/PriyansuMaurya/code-trio/tree/main/tribute-to-vikram-sarabhai) | [Live Demo](https://priyansumaurya.github.io/code-trio/tribute-to-vikram-sarabhai/) |
+| [iPhone Calculator](https://priyansumaurya.github.io/code-trio/calculator/) | An elegant calculator app with a design inspired by the iPhone. | [GitHub](https://github.com/PriyansuMaurya/code-trio/tree/main/calculator) | [Live Demo](https://priyansumaurya.github.io/code-trio/calculator/) |
 
-[![Calculator](https://user-images.githubusercontent.com/101447544/213121729-42571e08-c554-458d-81cb-6c5387802b26.png)](https://github.com/PriyansuMaurya/CodeTrio/blob/main/calculator/Cal-README.md)
+_Explore these projects and have fun!_ 🎈
 
-<br>
+**Note:** Each project has its own repository where you can find the source code and dive into the details. Don't hesitate to explore the live demos to see the projects in action! 🤖
 
-## 2️⃣ . 
- 
-<br>
+## Project Previews 📸
 
-[![Tribute Page](https://user-images.githubusercontent.com/101447544/213121658-bf3a9fc3-6668-40ec-b23e-e35294843414.png)](https://github.com/PriyansuMaurya/CodeTrio/blob/main/adams-todo/TODO-README.md)
+Here are previews of the projects:
 
-<br>
+![Trello Management](https://github.com/PriyansuMaurya/CodeTrio/assets/101447544/c1b93ef8-5ac6-4ada-98d5-e9b23f95a907)
+![Rick and Morty App](https://github.com/PriyansuMaurya/CodeTrio/assets/101447544/02885109-5982-432b-b956-4cc8e5fd64bb)
+![Adams TODO Preview](https://user-images.githubusercontent.com/101447544/213121658-bf3a9fc3-6668-40ec-b23e-e35294843414.png)
+![Tribute Page Preview](https://user-images.githubusercontent.com/101447544/213121576-52275855-952f-429e-8e8a-cc8556f0abf7.png)
+![iPhone Calculator Preview](https://user-images.githubusercontent.com/101447544/213121729-42571e08-c554-458d-81cb-6c5387802b26.png)
 
-## 3️⃣ . 
-
-<br>
-
-[![ TODO ](https://user-images.githubusercontent.com/101447544/213121576-52275855-952f-429e-8e8a-cc8556f0abf7.png)](https://github.com/PriyansuMaurya/CodeTrio/blob/main/tribute-to-vikram-sarabhai/TRIBUTE-README.md)
-
-
-
+Please don't hesitate to get in touch if you have any questions, thoughts to share, or if you simply want to connect. For updates and more, you're welcome to follow me on [Twitter](https://twitter.com/PrianshuMaurya). I truly appreciate your time in exploring these projects! 🙌
